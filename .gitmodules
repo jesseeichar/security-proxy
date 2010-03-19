@@ -1,0 +1,15 @@
+[submodule "core"]
+	path = core
+	url = git@github.com:jesseeichar/proxy-core.git
+[submodule "config"]
+	path = config
+	url = git@github.com:jesseeichar/proxy-config.git
+[submodule "embedded-ldap"]
+	path = embedded-ldap
+	url = git@github.com:jesseeichar/embedded-ldap.git
+[submodule "cas-server"]
+	path = cas-server
+	url = git@github.com:jesseeichar/cas-server-webapp.git
+[submodule "security-scripts"]
+	path = security-scripts
+	url = git@github.com:jesseeichar/jvm-security-scripts.git
