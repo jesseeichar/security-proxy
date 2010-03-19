@@ -1,15 +1,15 @@
-[submodule "core"]
-	path = core
+[submodule "proxy-core"]
+	path = subprojects/proxy-core
 	url = git@github.com:jesseeichar/proxy-core.git
-[submodule "config"]
-	path = config
+[submodule "proxy-config"]
+	path = subprojects/proxy-config
 	url = git@github.com:jesseeichar/proxy-config.git
 [submodule "embedded-ldap"]
-	path = embedded-ldap
+	path = subprojects/embedded-ldap
 	url = git@github.com:jesseeichar/embedded-ldap.git
 [submodule "cas-server"]
-	path = cas-server
+	path = subprojects/cas-server
 	url = git@github.com:jesseeichar/cas-server-webapp.git
 [submodule "security-scripts"]
-	path = security-scripts
+	path = subprojects/security-scripts
 	url = git@github.com:jesseeichar/jvm-security-scripts.git
