@@ -1,4 +1,5 @@
-subprojects {
+
+configure(subprojects.findAll {it.name == ('core') || it.name == 'cas'}) {
     group='com.camptocamp'
     version='0.5.0'
 
@@ -14,7 +15,7 @@ subprojects {
 
     SPRING_VERSION = '2.5.6.SEC01'
     SPRING_SECURITY_VERSION = '2.0.5.RELEASE'
-    
+
     SPRING_DEPS = [ 'spring-webmvc', 'spring-jdbc', 
                     'spring-aop','spring-web'
                   ].collect {"org.springframework:$it:$SPRING_VERSION"}
@@ -34,7 +35,7 @@ subprojects {
     }
 }
 
-project(':core') {
+project(':proxy:core') {
 
     dependencies {
         compile SPRING_DEPS
@@ -51,7 +52,7 @@ project(':core') {
         ant.copy (todir: "$buildDir/webappSource") {
             fileset(dir: "src/main/filtered-webapp")
             filterset (begintoken: '@', endtoken: '@'){
-                filtersfile(file: "${project(':config').projectDir}/filters/global-resource.filter")
+                filtersfile(file: "${project(':proxy:config').projectDir}/filters/global-resource.filter")
             }
         }
     }
@@ -67,4 +68,3 @@ project(':core') {
         
     }
 }
-
