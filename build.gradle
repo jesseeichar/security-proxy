@@ -1,4 +1,3 @@
-
 configure(subprojects.findAll {it.name == ('core') || it.name == 'cas'}) {
     group='com.camptocamp'
     version='0.5.0'
@@ -32,39 +31,5 @@ configure(subprojects.findAll {it.name == ('core') || it.name == 'cas'}) {
                    
     configurations {
         compile.transitive = true
-    }
-}
-
-project(':proxy:core') {
-
-    dependencies {
-        compile SPRING_DEPS
-        compile SPRING_SECURITY_DEPS
-        compile SPRING_LDAP_DEPS
-        compile OTHER_DEPS
-        compile ('org.tuckey:urlrewritefilter:3.1.0') {
-            exclude module: 'commons-logging'
-          }
-        providedCompile ('javax.servlet:servlet-api:2.4')
-    }
-    
-    task filtering << {
-        ant.copy (todir: "$buildDir/webappSource") {
-            fileset(dir: "src/main/filtered-webapp")
-            filterset (begintoken: '@', endtoken: '@'){
-                filtersfile(file: "${project(':proxy:config').projectDir}/filters/global-resource.filter")
-            }
-        }
-    }
-    
-    war {
-        dependsOn filtering
-        
-        from "$buildDir/webappSource"
-    }
-    
-    task show  << {
-        war.source.asFileTree.matching {println it; it}.asPath
-        
     }
 }
