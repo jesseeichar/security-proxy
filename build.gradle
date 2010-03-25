@@ -8,8 +8,10 @@ configure(subprojects.findAll {it.name == ('core') || it.name == 'cas'}) {
     SPRING_REPOS = ['http://repo1.maven.org/maven2']
 
     repositories {
-        mavenCentral()
-        mavenRepo urls: SPRING_REPOS
+        if(getByName(org.gradle.api.artifacts.ResolverContainer.DEFAULT_MAVEN_CENTRAL_REPO_NAME) == null) {
+            mavenCentral()
+        }
+        mavenRepo name:'SpringRepos', urls: SPRING_REPOS
     }
 
     SPRING_VERSION = '2.5.6.SEC01'
