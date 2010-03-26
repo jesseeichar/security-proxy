@@ -1,13 +1,13 @@
 subprojects {
-    apply type: com.camptocamp.gradle.plugin.Camptocamp
+    apply plugin: com.camptocamp.gradle.plugin.Camptocamp
 }
 
 configure(subprojects.findAll {it.name == ('core') || it.name == 'cas'}) {
     group='com.camptocamp'
     version='0.5.0'
 
-    apply id: 'war'
-    apply id: 'jetty'
+    apply plugin: 'war'
+    apply plugin: 'jetty'
 
     SPRING_REPOS = ['http://repo1.maven.org/maven2']
 
