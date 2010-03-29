@@ -1,0 +1,15 @@
+[submodule "core"]
+	path = core
+	url = git@github.com:jesseeichar/proxy-core.git
+[submodule "ldap"]
+	path = ldap
+	url = git@github.com:jesseeichar/embedded-ldap.git
+[submodule "cas"]
+	path = cas
+	url = git@github.com:jesseeichar/cas-server-webapp.git
+[submodule "security-scripts"]
+	path = security-scripts
+	url = git@github.com:jesseeichar/jvm-security-scripts.git
+[submodule "buildSrc"]
+	path = buildSrc
+	url = git@github.com:jesseeichar/gradle-extensions.git
