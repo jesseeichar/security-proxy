@@ -1,14 +1,14 @@
 [submodule "core"]
-	path = proxy/core
+	path = core
 	url = git@github.com:jesseeichar/proxy-core.git
 [submodule "ldap"]
-	path = proxy/ldap
+	path = ldap
 	url = git@github.com:jesseeichar/embedded-ldap.git
 [submodule "cas"]
-	path = proxy/cas
+	path = cas
 	url = git@github.com:jesseeichar/cas-server-webapp.git
 [submodule "scripts"]
-	path = proxy/scripts
+	path = scripts
 	url = git@github.com:jesseeichar/jvm-security-scripts.git
 [submodule "buildSrc"]
 	path = buildSrc
