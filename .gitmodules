@@ -1,9 +1,6 @@
 [submodule "core"]
 	path = proxy/core
 	url = git@github.com:jesseeichar/proxy-core.git
-[submodule "config"]
-	path = proxy/config
-	url = git@github.com:jesseeichar/proxy-config.git
 [submodule "ldap"]
 	path = proxy/ldap
 	url = git@github.com:jesseeichar/embedded-ldap.git
