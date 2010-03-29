@@ -1,2 +1,1 @@
-include 'proxy:cas'
-include 'proxy:core', 'proxy:config'
+include 'cas', 'core', 'config'
