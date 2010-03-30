@@ -38,4 +38,10 @@ configure(subprojects.findAll {it.name == ('core') || it.name == 'cas'}) {
     configurations {
         compile.transitive = true
     }
+    
+    jettyRun {
+        if(project.name == "cas") httpPort = 8081
+        if(project.name == "core") httpPort = 8082
+        
+    }
 }
